@@ -1,0 +1,28 @@
+{% load static %}
+
+{% extends 'portfolio/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<div class="section">
+    <h2>自己紹介</h2>
+    <p>Django × AI × APIを活用したWebアプリ開発</p>
+</div>
+
+<div class="section">
+    <h2>強み</h2>
+    <ul>
+        <li>AI（ローカルLLM）連携</li>
+        <li>API・スクレイピング</li>
+        <li>エラー対応</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>プロジェクト</h2>
+    <a href="/projects/" class="btn">一覧を見る</a>
+</div>
+
+{% endblock %}

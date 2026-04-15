@@ -1,0 +1,111 @@
+{% load static %}
+
+{% extends 'portfolio/base.html' %}
+
+{% block title %}AI同士会話{% endblock %}
+
+{% block content %}
+
+<style>
+    .hero {
+        background: linear-gradient(135deg, #6f42c1, #b19cd9);
+        color: white;
+        padding: 30px;
+        border-radius: 12px;
+    }
+
+    .section {
+        background: white;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+        border-left: 5px solid #6f42c1;
+        padding-left: 10px;
+    }
+
+    ul {
+        line-height: 1.8;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 10px 15px;
+        background: #28a745;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+    }
+
+    .tag {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 4px 10px;
+        border-radius: 6px;
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+</style>
+
+<div class="hero">
+    <div class="tag">MAIN PROJECT</div>
+    <h1>AI同士会話システム（ai_chat）</h1>
+    <p>
+        ローカルLLMを用いて、AI同士が自動で会話を継続するシステム。
+    </p>
+</div>
+
+<div class="section">
+    <h2>概要</h2>
+    <p>
+        人間を介さず、AI同士が自律的に会話を生成する仕組みを実装。
+        LLMの挙動・会話生成の特性を検証するためのプロジェクト。
+    </p>
+</div>
+
+<div class="section">
+    <h2>背景・課題</h2>
+    <ul>
+        <li>AIは通常「人間との対話」が前提</li>
+        <li>AI同士の会話挙動を検証したい</li>
+        <li>プロンプト設計の影響を理解する目的</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>工夫した点</h2>
+    <ul>
+        <li>AI→AIのプロンプト受け渡し設計</li>
+        <li>無限ループ防止（回数制御）</li>
+        <li>キャラクター設定による会話変化</li>
+        <li>会話ログの保存と可視化</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>使用技術</h2>
+    <ul>
+        <li>Python / Django</li>
+        <li>Ollama（ローカルLLM）</li>
+        <li>JavaScript</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>課題・改善点</h2>
+    <ul>
+        <li>会話の一貫性向上</li>
+        <li>意味のある対話生成</li>
+        <li>処理負荷の最適化</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>リンク</h2>
+    <a href="/projects/" class="btn">← プロジェクト一覧へ</a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,111 @@
+{% load static %}
+
+{% extends 'portfolio/base.html' %}
+
+{% block title %}ECサイト{% endblock %}
+
+{% block content %}
+
+<style>
+    .hero {
+        background: linear-gradient(135deg, #28a745, #7dd87d);
+        color: white;
+        padding: 30px;
+        border-radius: 12px;
+    }
+
+    .section {
+        background: white;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+        border-left: 5px solid #28a745;
+        padding-left: 10px;
+    }
+
+    ul {
+        line-height: 1.8;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 10px 15px;
+        background: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+    }
+
+    .tag {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 4px 10px;
+        border-radius: 6px;
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+</style>
+
+<div class="hero">
+    <div class="tag">MAIN PROJECT</div>
+    <h1>ECサイト（mysite）</h1>
+    <p>
+        商品管理・カート機能を備えたWebアプリケーション。
+    </p>
+</div>
+
+<div class="section">
+    <h2>概要</h2>
+    <p>
+        Djangoを用いた基本的なECサイト構造の実装。
+        商品一覧・詳細・カート機能を含むWebアプリ。
+    </p>
+</div>
+
+<div class="section">
+    <h2>背景・課題</h2>
+    <ul>
+        <li>Web開発の基本構造（CRUD）習得</li>
+        <li>実務レベルのアプリ設計理解</li>
+        <li>セッション管理の実践</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>工夫した点</h2>
+    <ul>
+        <li>商品・ユーザー・カートのデータ設計</li>
+        <li>セッションによるカート管理</li>
+        <li>URL設計とView分離</li>
+        <li>エラー対応（AttributeErrorなど）</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>使用技術</h2>
+    <ul>
+        <li>Python / Django</li>
+        <li>SQLite</li>
+        <li>HTML / CSS</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>課題・改善点</h2>
+    <ul>
+        <li>決済機能の追加</li>
+        <li>UI改善</li>
+        <li>セキュリティ強化</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>リンク</h2>
+    <a href="/projects/" class="btn">← プロジェクト一覧へ</a>
+</div>
+
+{% endblock %}

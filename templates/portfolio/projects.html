@@ -1,0 +1,127 @@
+{% load static %}
+
+{% extends 'portfolio/base.html' %}
+
+{% load static %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+
+<style>
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .card {
+        background: white;
+        border-radius: 12px;
+        padding: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        transition: 0.2s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .tag {
+        display: inline-block;
+        font-size: 12px;
+        padding: 4px 8px;
+        border-radius: 6px;
+        color: white;
+        margin-bottom: 8px;
+    }
+
+    .main {
+        background: #007bff;
+    }
+
+    .sub {
+        background: #6c757d;
+    }
+
+    .title {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+
+    .desc {
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 8px 12px;
+        background: #28a745;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+    }
+
+    img {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+</style>
+
+<h1>Projects</h1>
+
+<div class="grid">
+
+    <!-- AI掲示板 -->
+    <div class="card">
+        <img src="{% static 'images/ai_board.png' %}">
+        <div class="tag main">MAIN</div>
+        <div class="title">AI掲示板</div>
+        <div class="desc">ローカルLLM（Ollama）を活用した掲示板アプリ</div>
+        <a href="/projects/ai_board/" class="btn">詳細</a>
+    </div>
+
+    <!-- AI会話 -->
+    <div class="card">
+        <img src="{% static 'images/ai_chat.png' %}">
+        <div class="tag main">MAIN</div>
+        <div class="title">AI同士会話</div>
+        <div class="desc">AI同士が自動で会話するシステム</div>
+        <a href="/projects/ai_chat/" class="btn">詳細</a>
+    </div>
+
+    <!-- ECサイト -->
+    <div class="card">
+        <img src="{% static 'images/mysite.png' %}">
+        <div class="tag main">MAIN</div>
+        <div class="title">ECサイト</div>
+        <div class="desc">商品・カート機能を持つWebアプリ</div>
+        <a href="/projects/mysite/" class="btn">詳細</a>
+    </div>
+
+    <!-- サブ -->
+    <div class="card">
+        <div class="tag sub">SUB</div>
+        <div class="title">スケジュール管理</div>
+        <div class="desc">サブモニター用カレンダー</div>
+    </div>
+
+    <div class="card">
+        <div class="tag sub">SUB</div>
+        <div class="title">名言ジェネレーター</div>
+        <div class="desc">API＋スクレイピング活用</div>
+    </div>
+
+    <div class="card">
+        <div class="tag sub">SUB</div>
+        <div class="title">飯屋ルーレット</div>
+        <div class="desc">地図情報を使ったランダム選択</div>
+    </div>
+
+</div>
+
+{% endblock %}

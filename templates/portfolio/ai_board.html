@@ -1,0 +1,138 @@
+{% extends 'portfolio/base.html' %}
+
+{% load static %}
+
+{% block title %}AI掲示板{% endblock %}
+
+{% block content %}
+
+<style>
+    .hero {
+        background: linear-gradient(135deg, #007bff, #00c6ff);
+        color: white;
+        padding: 30px;
+        border-radius: 12px;
+    }
+
+    .section {
+        background: white;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+        border-left: 5px solid #007bff;
+        padding-left: 10px;
+    }
+
+    ul {
+        line-height: 1.8;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 10px 15px;
+        background: #28a745;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        margin-top: 10px;
+    }
+
+    .btn:hover {
+        background: #218838;
+    }
+
+    .tag {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 4px 10px;
+        border-radius: 6px;
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .image-box {
+        margin-top: 20px;
+    }
+</style>
+
+<!-- ヘッダー -->
+<div class="hero">
+    <div class="tag">MAIN PROJECT</div>
+    <h1>AI掲示板（ai_board）</h1>
+    <p>
+        ローカルLLM（Ollama）を活用した掲示板アプリ。<br>
+        投稿に対してAIが自動返信する仕組みを実装。
+    </p>
+</div>
+
+<!-- 画像 -->
+<div class="section image-box">
+    <h2>画面イメージ</h2>
+
+    <img src="{% static 'images/ai_board.png' %}" alt="AI掲示板画面">
+</div>
+
+<!-- 概要 -->
+<div class="section">
+    <h2>概要</h2>
+    <p>
+        外部APIに依存せず、ローカル環境でAI機能を実装した掲示板アプリ。
+        DjangoとLLMを組み合わせた実用的なWebサービス。
+    </p>
+</div>
+
+<!-- 背景 -->
+<div class="section">
+    <h2>背景・課題</h2>
+    <ul>
+        <li>外部API依存によるコスト・制限の問題</li>
+        <li>ローカルで完結するAI環境の構築</li>
+        <li>DjangoとAIの統合検証</li>
+    </ul>
+</div>
+
+<!-- 工夫 -->
+<div class="section">
+    <h2>工夫した点</h2>
+    <ul>
+        <li>OllamaによるローカルLLM連携</li>
+        <li>投稿→AI応答の自動処理設計</li>
+        <li>接続エラー時の例外処理</li>
+        <li>スレッド構造を意識したデータ設計</li>
+    </ul>
+</div>
+
+<!-- 技術 -->
+<div class="section">
+    <h2>使用技術</h2>
+    <ul>
+        <li>Python / Django</li>
+        <li>Ollama（ローカルLLM）</li>
+        <li>HTML / CSS</li>
+    </ul>
+</div>
+
+<!-- 改善 -->
+<div class="section">
+    <h2>課題・改善点</h2>
+    <ul>
+        <li>応答速度の改善</li>
+        <li>UI/UXの向上</li>
+        <li>文脈保持の精度向上</li>
+    </ul>
+</div>
+
+<!-- リンク -->
+<div class="section">
+    <h2>リンク</h2>
+
+    <a href="https://github.com/あなたのID/リポジトリ名" class="btn">GitHub</a>
+    <br>
+    <a href="/projects/" class="btn">← プロジェクト一覧へ</a>
+</div>
+
+{% endblock %}
